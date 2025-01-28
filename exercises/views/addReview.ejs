@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 | Exercise 3</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  <h1>Submit your details</h1>
+  <div class="form-container">
+    <form action="/review/<%= movieId %>" method="post">
+
+      <div class="form-field">
+        <div class="label">
+          <label for="movieId">movieId</label>
+        </div>
+        <input type="text" id="movieId" name="movieId">
+      </div>
+
+      <div class="form-field">
+        <div class="label">
+          <label for="createdAt">createdAt</label>
+        </div>
+        <input name="createdAt" id="createdAt">
+      </div>
+
+      <div class="form-field">
+        <div class="label">
+          <label for="content">content</label>
+        </div>
+        <input name="content" id="content">
+      </div>
+      <div class="form-field">
+        <div class="label">
+          <label for="rating">Rating</label>
+        </div>
+        <input name="rating" id="rating">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+
+</html>

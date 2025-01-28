@@ -16,6 +16,19 @@ class Movie {
     'War'
   ]
 
+  static async addReview(id, payload) {
+
+    const { createdAt, content, rating } = payload;
+    const movieId = id;
+    const query = `
+    INSERT INTO reviews (movieId, createdAt, content, rating)
+    VALUES (?, ?, ?, ?);
+    `
+
+    const results = await db.raw(query, [movieId, createdAt, content, rating])
+    return results;
+  }
+
   static async getAllMovies() {
     const query = 'SELECT * FROM movies'
     const results = await db.raw(query)
